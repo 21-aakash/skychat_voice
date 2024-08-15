@@ -1,0 +1,7 @@
+streamlit==1.21.0
+dotenv==1.0.0
+google-generativeai==0.1.0
+streamlit-chat==0.1.0
+st-audiorec==0.0.1
+pydub==0.25.1
+speechrecognition==3.9.0
