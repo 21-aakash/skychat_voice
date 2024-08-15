@@ -2,6 +2,6 @@ streamlit
 dotenv
 google-generativeai
 streamlit-chat
-st-audiorec==0.0.1
-pydub==0.25.1
-speechrecognition==3.9.0
+st-audiorec
+pydub
+speechrecognition
