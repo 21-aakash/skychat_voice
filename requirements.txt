@@ -2,6 +2,7 @@ streamlit
 python-dotenv
 google-generativeai
 streamlit-chat
-st-audiorec
+streamlit-audio-recorder
 pydub
-speechrecognition
+
+
