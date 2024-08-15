@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 import google.generativeai as genai
 from streamlit_chat import message
-from st_audiorec import st_audiorec
+from audio_recorder_streamlit import audio_recorder
 from pydub import AudioSegment
 import speech_recognition as sr
 from io import BytesIO
@@ -75,13 +75,21 @@ if 'chat_history' not in st.session_state:
 
 # Add the audio recording feature
 st.subheader("Record and Upload Audio")
-wav_audio_data = st_audiorec()
+audio_bytes = audio_recorder(
+    text="Click to Record",
+    recording_color="#e8b62c",
+    neutral_color="#6aa36f",
+    icon_name="microphone",
+    icon_size="6x",
+    pause_threshold=2.0,  # Adjust as needed
+    sample_rate=41_000    # Adjust as needed
+)
 
-if wav_audio_data is not None:
-    st.audio(wav_audio_data, format='audio/wav')
+if audio_bytes is not None:
+    st.audio(audio_bytes, format='audio/wav')
     
     # Transcribe the recorded WAV audio
-    transcript = transcribe_audio_with_speech_recognition(wav_audio_data)
+    transcript = transcribe_audio_with_speech_recognition(audio_bytes)
     st.write("Transcribed Text: ", transcript)
     
     # Use the transcribed text as a prompt
