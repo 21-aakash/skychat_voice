@@ -1,5 +1,6 @@
 streamlit
-dotenv
+python-dotenv
+
 google-generativeai
 streamlit-chat
 st-audiorec
