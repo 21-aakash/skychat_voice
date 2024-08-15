@@ -2,7 +2,7 @@ streamlit
 python-dotenv
 google-generativeai
 streamlit-chat
-streamlit-audio-recorder
+audio_recorder_streamlit
 pydub
 
 
