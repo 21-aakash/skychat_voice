@@ -67,7 +67,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.header("SkyChat voice 2.0.0 : Gemini Version (History)")
+st.header("👽SkyChat(voice) 2.1.0 : Gemini Version (History)")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
